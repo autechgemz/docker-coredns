@@ -1,0 +1,17 @@
+*~
+*.bk
+*.o
+*.back
+*.orig
+.nfs*
+*.lock
+vendor
+.bundle
+.*.swo
+*.swp
+.*.swp
+.project
+.settings
+.vagrant
+.vagrant.d
+.DS_Store

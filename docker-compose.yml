@@ -1,0 +1,17 @@
+version: "3"
+services:
+  coredns:
+    build:
+      context: .
+    image: autechgemz/coredns
+    ports:
+      - "53:53/udp"
+      - "53:53/tcp"
+    cap_add:
+      - NET_ADMIN
+      - NET_BIND_SERVICE
+    healthcheck:
+      test: ["CMD","dig","@localhost","localhost","+norec"]
+      interval: 5m
+      timeout: 10s
+      retries: 3

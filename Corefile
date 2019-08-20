@@ -1,0 +1,11 @@
+# Default Corefile, see https://coredns.io for more information.
+
+# Answer every below the root, with the whoami plugin. Log all queries
+# and errors on standard output.
+. {
+    whoami
+    cache
+    log
+    errors
+    forward . 8.8.8.8 8.8.4.4
+}
